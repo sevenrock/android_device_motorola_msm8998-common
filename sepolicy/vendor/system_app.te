@@ -9,8 +9,6 @@ r_dir_file(system_app, sysfs_battery_supply);
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
 
-allow system_app sysfs_fingerprint:dir search;
-
 binder_call(system_app, hal_power_default)
 allow system_app hal_power_default:binder call;
 allow system_app proc_vmallocinfo:file { getattr open read };

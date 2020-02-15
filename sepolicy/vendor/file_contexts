@@ -24,7 +24,6 @@
 /(mnt/vendor/persist|persist)(/*)?                               u:object_r:mnt_vendor_file:s0
 /(mnt/vendor/persist|persist)/camera(/.*)?                       u:object_r:persist_camera_file:s0
 /(mnt/vendor/persist|persist)/chargeonly(/.*)?                   u:object_r:persist_chargeonly_file:s0
-/(mnt/vendor/persist|persist)/egis(/.*)?                         u:object_r:fingerprint_data_file:s0
 /(mnt/vendor/persist|persist)/factory/audio(/.*)?                u:object_r:persist_audio_file:s0
 /(mnt/vendor/persist|persist)/mdm(/.*)?                          u:object_r:persist_mdm_file:s0
 
@@ -43,8 +42,6 @@
 /sys/devices/virtual/input/input4(/.*)?                       u:object_r:sysfs_sensor:s0
 
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.audio@2\.0-service                        u:object_r:hal_audio_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-fpcservice    u:object_r:hal_fingerprint_fpc_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets   u:object_r:hal_fingerprint_fpc_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8998    u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service\.msm8998    u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@1\.1-service\.msm8998  u:object_r:hal_thermal_default_exec:s0
@@ -59,16 +56,10 @@
 /sys/kernel/debug/rmt_storage(/.*)?                           u:object_r:debugfs_rmts:s0
 /sys/kernel/boot_wlan(/.*)?                                   u:object_r:sysfs_wifi:s0
 
-/sys/devices/soc/soc:fpc_fpc1020(/.*)?                        u:object_r:sysfs_fingerprint:s0
-/sys/devices/platform/egis_input(/.*)?                        u:object_r:sysfs_fingerprint:s0
-/sys/devices/soc/0.et320(/.*)?                                u:object_r:sysfs_fingerprint:s0
 /dev/esfp0                                                    u:object_r:tee_device:s0
 /data/\.fps(/.*)?                                             u:object_r:system_fps_data_file:s0
 /data/vendor/misc/cutback(/.*)?                               u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                           u:object_r:cutback_socket:s0
-/data/vendor/fpc(/.*)?                                        u:object_r:fingerprint_data_file:s0
-/data/vendor/fpc/socket                                       u:object_r:fingerprint_socket:s0
-/data/vendor/.fps(/.*)?                                       u:object_r:fingerprint_data_file:s0
 
 # Input devices
 /(vendor|system/vendor)/usr/idc(/.*)?                         u:object_r:vendor_idc_file:s0
