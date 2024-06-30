@@ -129,8 +129,6 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/sprint_apns.xml
-ENABLE_VENDOR_RIL_SERVICE := true
-TARGET_USES_OLD_MNC_FORMAT := true
 ODM_MANIFEST_SKUS += qcril
 ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/odm_manifest_qcril.xml
 
